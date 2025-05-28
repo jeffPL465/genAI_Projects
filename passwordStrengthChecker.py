@@ -72,6 +72,9 @@ if passwordRating >= 10:    #If the pasword rating exceeds 10/10, then rating st
 
 
 # Putting everything together
+# If password is correct size, then check for any violations and if there are, join violation strings onto message.
+# If no violations, the password is sufficient and will display the strength and rating
+# If password isn't long enough, then insufficient password message will be displayed
 if len(password) >= passMinimum: 
     if numLower < 1 or numUpper < 1 or numDigit < 1 or numSpecial < 1:
             print('Your password needs at least', ' and '''.join(violations))
